@@ -1,0 +1,16 @@
+/* Portfolio-specific styles - keeping minimal as most styles are in index.css */
+
+#root {
+  min-height: 100vh;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background: hsl(195 100% 65% / 0.3);
+  color: hsl(0 0% 95%);
+}
