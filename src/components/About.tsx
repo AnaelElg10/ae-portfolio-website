@@ -22,7 +22,7 @@ const About = () => {
 
             <div className="space-y-6 text-foreground-muted text-lg leading-relaxed">
               <p>
-                Hello! I'm Alex, a passionate software engineer with a love for creating 
+                Hello! I'm Aref, a passionate software engineer with a love for creating 
                 digital experiences that make a difference. My journey in tech started back 
                 in 2018 when I built my first website – turns out building things for the 
                 web is incredibly rewarding!

@@ -15,19 +15,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@alexrodriguez.dev',
-      href: 'mailto:hello@alexrodriguez.dev'
+      value: 'elaggounaref.business@gmail.com',
+      href: 'mailto:elaggounaref.business@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+33 7 58 65 60 54',
+      href: 'tel:+33758656054'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Rennes and Paris, France | Milan, Italy',
       href: null
     }
   ];
@@ -166,7 +166,7 @@ const Contact = () => {
                     className="border-foreground-muted text-foreground-muted hover:border-primary hover:text-primary transition-all duration-300"
                     asChild
                   >
-                    <a href="mailto:hello@alexrodriguez.dev">
+                    <a href="mailto:elaggounaref.business@gmail.com">
                       <Mail className="mr-2 h-4 w-4" />
                       Say Hello
                     </a>

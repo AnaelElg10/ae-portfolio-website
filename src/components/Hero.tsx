@@ -31,9 +31,9 @@ const Hero = () => {
             <div className="space-y-4">
               <h2 className="text-primary font-mono text-lg">Hi, my name is</h2>
               <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
-                <span className="text-foreground">Alex</span>
+                <span className="text-foreground">Aref</span>
                 <br />
-                <span className="gradient-text">Rodriguez</span>
+                <span className="gradient-text">Elaggoun</span>
               </h1>
               <h3 className="text-3xl lg:text-4xl font-bold text-foreground-secondary">
                 I build exceptional digital experiences.
@@ -77,7 +77,7 @@ const Hero = () => {
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated">
                   <img 
                     src={engineerPortrait}
-                    alt="Alex Rodriguez - Software Engineer" 
+                    alt="Aref Elaggoun - Software Engineer" 
                     className="w-full h-full object-cover"
                   />
                   

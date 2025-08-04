@@ -6,34 +6,31 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'EcoTracker',
-      description: 'A comprehensive carbon footprint tracking application that helps users monitor and reduce their environmental impact through daily habit tracking and AI-powered recommendations.',
-      longDescription: 'Built with React and Node.js, this application features real-time data visualization, social sharing capabilities, and integration with IoT devices for automated tracking.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js', 'AWS', 'Socket.io'],
-      github: 'https://github.com/alexrodriguez/ecotracker',
-      live: 'https://ecotracker-demo.com',
+      title: 'Bug Hawk',
+      description: 'A production-grade SaaS bug tracking system for teams to report, manage, assign, and resolve software issues. Think Trello + Jira, but lightweight and DevSecOps-compliant.',
+      longDescription: 'Built with Typescript, React, and NestJS, Bug Hawk features a modular architecture, real-time collaboration tools, and seamless integration with popular CI/CD pipelines.',
+      technologies: ['Typescript', 'React', 'Docker', 'NestJS', 'PostgreSQL', 'Docker', 'AWS'],
+      github: 'https://github.com/AnaelElg10/bug-hawk',
       featured: true,
-      image: '/api/placeholder/600/400'
+      image: '../img/bughawk.png',
     },
     {
-      title: 'DevFlow',
-      description: 'A project management tool specifically designed for development teams, featuring kanban boards, time tracking, and integrated code review workflows.',
-      longDescription: 'Features include real-time collaboration, automated deployment tracking, and detailed analytics for team productivity insights.',
-      technologies: ['Vue.js', 'TypeScript', 'Express', 'PostgreSQL', 'Redis', 'Docker'],
-      github: 'https://github.com/alexrodriguez/devflow',
-      live: 'https://devflow-demo.com',
+      title: 'EcoVision AI',
+      description: 'An advanced environmental monitoring and prediction system that combines computer vision, time series forecasting, and reinforcement learning to analyze satellite imagery and predict environmental changes.',
+      longDescription: 'EcoVision AI is an advanced environmental monitoring and prediction system that combines cutting-edge computer vision, time series forecasting, and reinforcement learning to analyze satellite imagery, predict environmental changes, and optimize conservation strategies. The system provides real-time insights into deforestation, climate patterns, and biodiversity changes.',
+      technologies: ['Python', 'TensorFlow & Pytorch', 'FastAPI', 'Hugging Face Transformers', 'Docker', 'Apache Spark', 'AWS', 'MLOps & Infrastructure'],
+      github: 'https://github.com/AnaelElg10/Intelligent-Environmental-Monitoring-And-Prediction-System',
       featured: true,
-      image: '/api/placeholder/600/400'
+      image: '../img/EcoAI.png'
     },
     {
-      title: 'AI Content Studio',
-      description: 'A content creation platform that leverages AI to help creators generate, edit, and optimize content across multiple formats and platforms.',
-      longDescription: 'Integrated with multiple AI APIs for text, image, and video generation, with a custom editor and automated publishing workflows.',
-      technologies: ['Next.js', 'Python', 'FastAPI', 'OpenAI API', 'Tailwind CSS', 'Vercel'],
-      github: 'https://github.com/alexrodriguez/ai-content-studio',
-      live: 'https://ai-content-studio.com',
+      title: 'Global SmartCity Data Platform',
+      description: 'An enterprise-grade, cloud-native solution that ingests, processes, analyzes, and visualizes real-time and historical data from multiple cities worldwide.',
+      longDescription: 'The Global SmartCity Data Platform is an enterprise-grade, cloud-native solution that ingests, processes, analyzes, and visualizes real-time and historical data from multiple cities worldwide. It demonstrates advanced data engineering patterns, big data processing, machine learning, and modern DevOps practices.',
+      technologies: ['Apache Kafka & Spark', 'AWS', 'PostgreSQL', 'Scikit-learn & XGBoost', 'Kubernetes'],
+      github: 'https://github.com/AnaelElg10/Global-SmartCity-Data-Platform',
       featured: true,
-      image: '/api/placeholder/600/400'
+      image: '../img/GlobalSmartCity.png'
     },
     {
       title: 'CryptoPortfolio',

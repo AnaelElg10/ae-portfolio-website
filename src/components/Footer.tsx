@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:hello@alexrodriguez.dev', label: 'Email' }
+    { icon: Github, href: 'https://github.com/AnaelElg10', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/arefelaggoun10/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:elaggounaref.business@gmail.com', label: 'Email' }
   ];
 
   const scrollToTop = () => {
@@ -36,7 +36,7 @@ const Footer = () => {
               onClick={scrollToTop}
               className="text-foreground-muted hover:text-primary transition-colors animated-underline font-mono text-sm"
             >
-              Alex Rodriguez
+              Aref Elaggoun
             </button>
             <p className="text-foreground-muted text-sm flex items-center justify-center space-x-1">
               <span>Built with</span>
@@ -44,7 +44,7 @@ const Footer = () => {
               <span>using React & Tailwind CSS</span>
             </p>
             <p className="text-foreground-muted text-xs">
-              © 2024 Alex Rodriguez. All rights reserved.
+              © 2025 Aref Elaggoun. All rights reserved.
             </p>
           </div>
         </div>
