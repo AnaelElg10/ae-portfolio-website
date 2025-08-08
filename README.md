@@ -80,7 +80,7 @@ src/
 ## Deployment
 
 This project is optimized for deployment on:
-- Vercel
+- Vercel  
 - Netlify
 - GitHub Pages
 - Any static hosting service
