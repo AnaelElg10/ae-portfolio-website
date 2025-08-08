@@ -1,16 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted');
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -21,13 +13,12 @@ const Contact = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+33 7 58 65 60 54',
-      href: 'tel:+33758656054'
+      value: '+33 7 58 65 60 54 ',
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'Rennes and Paris, France | Milan, Italy',
+      label: 'Current Location',
+      value: 'France',
       href: null
     }
   ];
@@ -35,7 +26,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 lg:py-32 bg-background-secondary">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center space-y-4 mb-16 fade-in">
             <h2 className="text-primary font-mono text-lg">04. What's Next?</h2>
@@ -49,146 +40,147 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Left side - Contact form */}
-            <Card className="glass border-card-border fade-in-left">
-              <div className="p-8">
-                <h4 className="text-2xl font-bold text-foreground mb-6">Send a Message</h4>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">
-                        First Name
-                      </label>
-                      <Input 
-                        placeholder="John"
-                        className="bg-background border-border focus:border-primary transition-colors"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">
-                        Last Name
-                      </label>
-                      <Input 
-                        placeholder="Doe"
-                        className="bg-background border-border focus:border-primary transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">
-                      Email
-                    </label>
-                    <Input 
-                      type="email"
-                      placeholder="john@example.com"
-                      className="bg-background border-border focus:border-primary transition-colors"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">
-                      Subject
-                    </label>
-                    <Input 
-                      placeholder="Let's work together!"
-                      className="bg-background border-border focus:border-primary transition-colors"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">
-                      Message
-                    </label>
-                    <Textarea 
-                      placeholder="Tell me about your project..."
-                      rows={5}
-                      className="bg-background border-border focus:border-primary transition-colors resize-none"
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit"
-                    className="w-full bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 glow-primary"
-                  >
-                    <Send className="mr-2 h-4 w-4" />
-                    Send Message
-                  </Button>
-                </form>
+          {/* Contact info and CTA - Enhanced Design */}
+          <div className="max-w-4xl mx-auto space-y-12 fade-in">
+            {/* Hero Contact Section */}
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                <span className="text-primary font-mono text-sm">Available for opportunities</span>
               </div>
-            </Card>
+              
+              <h4 className="text-3xl lg:text-4xl font-bold text-foreground">
+                Let's Build Something 
+                <span className="text-primary"> Amazing Together</span>
+              </h4>
+              
+              <p className="text-lg text-foreground-muted max-w-2xl mx-auto leading-relaxed">
+                Ready to turn your ideas into reality? I'm passionate about creating innovative solutions 
+                that make a difference. Let's start the conversation.
+              </p>
+            </div>
 
-            {/* Right side - Contact info and CTA */}
-            <div className="space-y-8 fade-in-right">
-              {/* Contact information */}
-              <div className="space-y-6">
-                <h4 className="text-2xl font-bold text-foreground">Let's Connect</h4>
-                <p className="text-foreground-muted leading-relaxed">
-                  I'm currently open to new opportunities and interesting projects. 
-                  If you think we'd be a good fit, I'd love to hear from you.
-                </p>
-
-                <div className="space-y-4">
-                  {contactInfo.map((info) => (
-                    <div key={info.label} className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                        <info.icon className="w-5 h-5 text-primary" />
+            {/* Interactive Contact Grid */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {contactInfo.map((info, index) => (
+                <Card key={info.label} className="glass border-card-border hover:border-primary/30 transition-all duration-500 group">
+                  <div className="p-6 text-center space-y-4">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <info.icon className="w-7 h-7 text-primary" />
                       </div>
-                      <div>
-                        <div className="text-sm text-foreground-muted">{info.label}</div>
-                        {info.href ? (
-                          <a 
-                            href={info.href}
-                            className="text-foreground hover:text-primary transition-colors animated-underline"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <div className="text-foreground">{info.value}</div>
-                        )}
-                      </div>
+                      <div className="absolute inset-0 bg-primary/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                     </div>
-                  ))}
+                    
+                    <div className="space-y-2">
+                      <h5 className="font-semibold text-foreground text-lg">{info.label}</h5>
+                      {info.href ? (
+                        <a 
+                          href={info.href}
+                          className="block text-foreground-muted hover:text-primary transition-colors duration-300 group-hover:text-primary text-sm leading-relaxed"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-foreground-muted text-sm leading-relaxed">
+                          {info.value}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+
+            {/* Main CTA Section */}
+            <div className="relative">
+              <Card className="glass border-card-border overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5" />
+                <div className="relative p-8 lg:p-12 text-center space-y-8">
+                  <div className="space-y-4">
+                    <h5 className="text-2xl lg:text-3xl font-bold text-foreground">
+                      Ready to Start Your Next Project?
+                    </h5>
+                    <p className="text-foreground-muted max-w-lg mx-auto">
+                      Whether it's a groundbreaking startup idea, enterprise solution, or innovative experiment – 
+                      I'm here to help bring your vision to life.
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <Button 
+                      size="lg"
+                      className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 glow-primary group px-8 py-3"
+                      asChild
+                    >
+                      <a href="mailto:elaggounaref.business@gmail.com">
+                        <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                        Let's Talk
+                      </a>
+                    </Button>
+                    
+                    <div className="flex items-center space-x-2 text-foreground-muted text-sm">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                      <span>Usually responds within 24 hours</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Card>
+            </div>
 
-              {/* Quick contact CTA */}
+            {/* Skills & Availability Showcase */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Expertise Areas */}
               <Card className="glass border-card-border">
-                <div className="p-6 text-center space-y-4">
-                  <h5 className="text-xl font-bold text-foreground">Prefer Email?</h5>
-                  <p className="text-foreground-muted text-sm">
-                    Send me a direct email and I'll get back to you within 24 hours.
-                  </p>
-                  <Button 
-                    variant="outline"
-                    className="border-foreground-muted text-foreground-muted hover:border-primary hover:text-primary transition-all duration-300"
-                    asChild
-                  >
-                    <a href="mailto:elaggounaref.business@gmail.com">
-                      <Mail className="mr-2 h-4 w-4" />
-                      Say Hello
-                    </a>
-                  </Button>
+                <div className="p-6 space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                      <span className="text-primary font-bold text-sm">⚡</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-foreground">What I Bring</h5>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      'Software Engineering',
+                      'AI & Machine Learning',
+                      'Cloud & DevOps',
+                      'Cyber Security',
+                      'Data Engineering',
+                      'System Design'
+                    ].map((skill) => (
+                      <div key={skill} className="flex items-center space-x-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                        <span className="text-foreground-muted text-sm">{skill}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Card>
 
-              {/* Availability status */}
+              {/* Work Preferences */}
               <Card className="glass border-card-border">
                 <div className="p-6 space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                    <h5 className="text-lg font-bold text-foreground">Currently Available</h5>
+                    <h5 className="text-xl font-bold text-foreground">Currently Available</h5>
                   </div>
-                  <p className="text-foreground-muted text-sm">
-                    I'm actively looking for new opportunities and freelance projects. 
-                    Open to full-time, contract, and consulting work.
+                  
+                  <p className="text-foreground-muted text-sm leading-relaxed">
+                    Open to exciting opportunities that challenge conventional thinking and create meaningful impact.
                   </p>
+                  
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Full-time</span>
-                    <span className="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded">Contract</span>
-                    <span className="text-xs bg-primary-glow/20 text-primary-glow px-2 py-1 rounded">Consulting</span>
+                    {[
+                      { label: 'Full-time', color: 'bg-primary/20 text-primary' },
+                      { label: 'Contract', color: 'bg-blue-500/20 text-blue-400' },
+                      { label: 'Consulting', color: 'bg-purple-500/20 text-purple-400' },
+                      { label: 'Remote', color: 'bg-green-500/20 text-green-400' }
+                    ].map((item) => (
+                      <span key={item.label} className={`text-xs px-3 py-1.5 rounded-full font-medium ${item.color}`}>
+                        {item.label}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </Card>

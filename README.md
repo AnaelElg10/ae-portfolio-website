@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
+# Portfolio Website
 
-## Project info
+A modern, responsive portfolio website showcasing my skills, experience, and projects as a Software Engineer.
 
-**URL**: https://lovable.dev/projects/2c2e9ade-cc06-4097-b8cf-3357396bd1c1
+## Features
 
-## How can I edit this code?
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI**: Clean, professional interface with smooth animations
+- **Fast Performance**: Built with Vite for optimal loading speeds
+- **Accessible**: Follows web accessibility best practices
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Build Tool**: Vite
+- **Development**: ESLint for code quality
+- **Deployment**: Ready for Vercel, Netlify, or similar platforms
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2c2e9ade-cc06-4097-b8cf-3357396bd1c1) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v18 or higher)
+- npm or bun package manager
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd ae-portfolio-website
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```bash
+npm install
+# or
+bun install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server:
+```bash
+npm run dev
+# or
+bun dev
+```
 
-**Use GitHub Codespaces**
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Building for Production
 
-## What technologies are used for this project?
+```bash
+npm run build
+# or
+bun run build
+```
 
-This project is built with:
+The built files will be in the `dist` directory, ready for deployment.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/     # Reusable UI components
+│   ├── ui/        # shadcn/ui components
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   ├── Experience.tsx
+│   ├── Hero.tsx
+│   ├── Navigation.tsx
+│   └── Projects.tsx
+├── pages/         # Page components
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions
+└── assets/        # Images and static files
+```
 
-Simply open [Lovable](https://lovable.dev/projects/2c2e9ade-cc06-4097-b8cf-3357396bd1c1) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+This project is optimized for deployment on:
+- Vercel
+- Netlify
+- GitHub Pages
+- Any static hosting service
 
-Yes, you can!
+Simply build the project and upload the `dist` folder contents to your hosting provider.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Feel free to reach out if you have any questions or would like to collaborate on a project.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

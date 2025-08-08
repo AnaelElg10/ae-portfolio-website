@@ -12,7 +12,7 @@ const Projects = () => {
       technologies: ['Typescript', 'React', 'Docker', 'NestJS', 'PostgreSQL', 'Docker', 'AWS'],
       github: 'https://github.com/AnaelElg10/bug-hawk',
       featured: true,
-      image: '../img/bughawk.png',
+      image: '/src/img/bughawk.png',
     },
     {
       title: 'EcoVision AI',
@@ -21,7 +21,7 @@ const Projects = () => {
       technologies: ['Python', 'TensorFlow & Pytorch', 'FastAPI', 'Hugging Face Transformers', 'Docker', 'Apache Spark', 'AWS', 'MLOps & Infrastructure'],
       github: 'https://github.com/AnaelElg10/Intelligent-Environmental-Monitoring-And-Prediction-System',
       featured: true,
-      image: '../img/EcoAI.png'
+      image: '/src/img/EcoAI.png'
     },
     {
       title: 'Global SmartCity Data Platform',
@@ -30,31 +30,32 @@ const Projects = () => {
       technologies: ['Apache Kafka & Spark', 'AWS', 'PostgreSQL', 'Scikit-learn & XGBoost', 'Kubernetes'],
       github: 'https://github.com/AnaelElg10/Global-SmartCity-Data-Platform',
       featured: true,
-      image: '../img/GlobalSmartCity.png'
+      image: '/src/img/GlobalSmartCity.png'
     },
     {
-      title: 'CryptoPortfolio',
-      description: 'Real-time cryptocurrency portfolio tracker with advanced analytics and automated trading features.',
-      technologies: ['React', 'WebSocket', 'Python', 'Flask', 'Chart.js'],
-      github: 'https://github.com/alexrodriguez/cryptoportfolio',
-      live: 'https://cryptoportfolio-demo.com',
-      featured: false
+      title: 'Blockchain and Smart Contracts : IdentiFi',
+      description: 'A decentralized identity verification platform leveraging blockchain technology and smart contracts for secure and efficient user authentication.',
+      technologies: ['Typescript', 'CSS', 'Web3.js', 'Solidity', 'Ethereum'],
+      github: 'https://github.com/AnaelElg10/Blockchain-SmartContracts',
+      live: 'https://identifi-with-blockchain.vercel.app/',
+      featured: false,
+      image: '/src/img/IdentiFi.png'
     },
     {
-      title: 'Recipe Finder',
-      description: 'Smart recipe recommendation app using machine learning to suggest meals based on available ingredients.',
-      technologies: ['React Native', 'TensorFlow.js', 'Firebase', 'Node.js'],
-      github: 'https://github.com/alexrodriguez/recipe-finder',
-      live: 'https://recipe-finder-app.com',
-      featured: false
+      title: 'Interactive Data Visualization',
+      description: 'An interactive data visualization platform for exploring and analyzing complex datasets.',
+      technologies: ['D3.js', 'CSS', 'Node.js', 'GraphQL', 'MongoDB', 'Docker'],
+      github: 'https://github.com/AnaelElg10/Interactive-Data-Visualization',
+      featured: false,
+      image: '/src/img/interactive-data.png'
     },
     {
-      title: 'Workout Planner',
-      description: 'Personalized fitness planning application with exercise tracking and progress visualization.',
-      technologies: ['Vue.js', 'Nuxt.js', 'Supabase', 'Chart.js'],
-      github: 'https://github.com/alexrodriguez/workout-planner',
-      live: 'https://workout-planner-demo.com',
-      featured: false
+      title: 'DDoS Attack Simulation Tool',
+      description: 'A tool for simulating DDoS attacks to test the resilience of web applications.',
+      technologies: ['Docker', 'Docker Compose', 'Bash Scripts', 'Apache HTTP Server', 'Nginx Server', 'Custom attacker scripts (using tools like hping3 and slowloris)'],
+      github: 'https://github.com/AnaelElg10/AttackDDoS',
+      featured: false,
+      image: '/src/img/ddos_attack_simulation_dashboard.png'
     }
   ];
 
@@ -64,51 +65,53 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 lg:py-32">
       <div className="container mx-auto px-6">
-        <div className="space-y-20">
+        <div className="space-y-12">
           {/* Section header */}
-          <div className="text-center space-y-4 fade-in">
+          <div className="text-center space-y-3 fade-in">
             <h2 className="text-primary font-mono text-lg">03. Some Things I've Built</h2>
-            <h3 className="text-4xl lg:text-5xl font-bold text-foreground">
+            <h3 className="text-3xl lg:text-4xl font-bold text-foreground">
               Featured Projects
             </h3>
-            <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+            <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
               A selection of projects that showcase my skills and passion for creating meaningful digital experiences.
             </p>
           </div>
 
           {/* Featured projects */}
-          <div className="space-y-20">
+          <div className="space-y-12">
             {featuredProjects.map((project, index) => (
               <div 
                 key={project.title}
-                className={`grid lg:grid-cols-12 gap-8 items-center fade-in-up ${
+                className={`grid lg:grid-cols-12 gap-6 items-center fade-in-up ${
                   index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Project image */}
-                <div className={`lg:col-span-7 ${index % 2 === 1 ? 'lg:col-start-6' : ''}`}>
+                <div className={`lg:col-span-6 ${index % 2 === 1 ? 'lg:col-start-7' : ''}`}>
                   <div className="relative group">
-                    <div className="bg-gradient-card rounded-xl overflow-hidden shadow-elevated">
-                      <div className="aspect-video bg-muted flex items-center justify-center">
-                        <div className="text-6xl text-foreground-muted opacity-20">
-                          {project.title.charAt(0)}
-                        </div>
+                    <div className="bg-gradient-card rounded-lg overflow-hidden shadow-elevated">
+                      <div className="aspect-video bg-muted relative">
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                        />
                       </div>
                     </div>
-                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                   </div>
                 </div>
 
                 {/* Project details */}
-                <div className={`lg:col-span-5 space-y-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:text-right' : ''}`}>
-                  <div className="space-y-2">
+                <div className={`lg:col-span-6 space-y-4 ${index % 2 === 1 ? 'lg:col-start-1 lg:text-right' : ''}`}>
+                  <div className="space-y-1">
                     <p className="text-primary font-mono text-sm">Featured Project</p>
-                    <h4 className="text-3xl font-bold text-foreground">{project.title}</h4>
+                    <h4 className="text-2xl lg:text-3xl font-bold text-foreground">{project.title}</h4>
                   </div>
 
-                  <div className="glass rounded-lg p-6 space-y-4">
-                    <p className="text-foreground-muted leading-relaxed">
+                  <div className="glass rounded-lg p-4 space-y-3">
+                    <p className="text-foreground-muted leading-relaxed text-sm">
                       {project.longDescription || project.description}
                     </p>
                   </div>
@@ -118,14 +121,14 @@ const Projects = () => {
                       <Badge 
                         key={tech}
                         variant="outline"
-                        className="border-primary/30 text-foreground-secondary hover:border-primary hover:text-primary transition-all duration-300"
+                        className="border-primary/30 text-foreground-secondary hover:border-primary hover:text-primary transition-all duration-300 text-xs"
                       >
                         {tech}
                       </Badge>
                     ))}
                   </div>
 
-                  <div className={`flex space-x-4 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
+                  <div className={`flex space-x-3 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
                     <Button 
                       variant="ghost" 
                       size="sm"
@@ -133,19 +136,21 @@ const Projects = () => {
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-5 h-5" />
+                        <Github className="w-4 h-4" />
                       </a>
                     </Button>
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-foreground-muted hover:text-primary"
-                      asChild
-                    >
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    </Button>
+                    {project.live && (
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-foreground-muted hover:text-primary"
+                        asChild
+                      >
+                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -154,9 +159,9 @@ const Projects = () => {
 
           {/* Other projects */}
           <div className="space-y-8">
-            <div className="text-center">
-              <h4 className="text-2xl font-bold text-foreground mb-4">Other Noteworthy Projects</h4>
-              <p className="text-foreground-muted">A collection of additional projects and experiments</p>
+            <div className="text-center space-y-3">
+              <h4 className="text-2xl lg:text-3xl font-bold text-foreground">Other Noteworthy Projects</h4>
+              <p className="text-foreground-muted max-w-xl mx-auto">A collection of additional projects and experiments</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -166,10 +171,19 @@ const Projects = () => {
                   className="glass border-card-border hover:border-primary/30 transition-all duration-500 group fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="p-6 h-full flex flex-col">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                        <span className="text-primary font-bold">{project.title.charAt(0)}</span>
+                  {/* Project image */}
+                  <div className="aspect-video bg-muted overflow-hidden rounded-t-lg relative">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  
+                  <div className="p-4 h-full flex flex-col">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <span className="text-primary font-bold text-sm">{project.title.charAt(0)}</span>
                       </div>
                       <div className="flex space-x-2">
                         <Button 
@@ -182,46 +196,48 @@ const Projects = () => {
                             <Github className="w-4 h-4" />
                           </a>
                         </Button>
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="text-foreground-muted hover:text-primary"
-                          asChild
-                        >
-                          <a href={project.live} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        </Button>
+                        {project.live && (
+                          <Button 
+                            variant="ghost" 
+                            size="sm"
+                            className="text-foreground-muted hover:text-primary"
+                            asChild
+                          >
+                            <a href={project.live} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="w-4 h-4" />
+                            </a>
+                          </Button>
+                        )}
                       </div>
                     </div>
 
-                    <div className="flex-1 space-y-4">
-                      <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <div className="space-y-3 flex-1">
+                      <h5 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                         {project.title}
                       </h5>
                       <p className="text-foreground-muted text-sm leading-relaxed">
                         {project.description}
                       </p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mt-6">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <Badge 
-                          key={tech}
-                          variant="outline"
-                          className="border-primary/30 text-foreground-secondary text-xs"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge 
-                          variant="outline"
-                          className="border-primary/30 text-foreground-secondary text-xs"
-                        >
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
+                      
+                      <div className="flex flex-wrap gap-1 pt-1">
+                        {project.technologies.slice(0, 4).map((tech) => (
+                          <Badge 
+                            key={tech}
+                            variant="outline"
+                            className="border-primary/30 text-foreground-secondary hover:border-primary hover:text-primary transition-all duration-300 text-xs"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                        {project.technologies.length > 4 && (
+                          <Badge 
+                            variant="outline"
+                            className="border-primary/30 text-foreground-secondary hover:border-primary hover:text-primary transition-all duration-300 text-xs"
+                          >
+                            +{project.technologies.length - 4}
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </Card>

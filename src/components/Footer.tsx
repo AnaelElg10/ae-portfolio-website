@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
@@ -39,9 +39,7 @@ const Footer = () => {
               Aref Elaggoun
             </button>
             <p className="text-foreground-muted text-sm flex items-center justify-center space-x-1">
-              <span>Built with</span>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-              <span>using React & Tailwind CSS</span>
+              <span>Built with React & Tailwind CSS</span>
             </p>
             <p className="text-foreground-muted text-xs">
               © 2025 Aref Elaggoun. All rights reserved.

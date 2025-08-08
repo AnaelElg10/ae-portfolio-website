@@ -12,15 +12,15 @@ const Navigation = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' }
+    { icon: Github, href: 'https://github.com/AnaelElg10', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/arefelaggoun10/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:elaggounaref.business@gmail.com', label: 'Email' }
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollY = window.scrollY + 100;
+      const scrollY = window.scrollY + 150; // Increased offset for better detection
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -31,14 +31,30 @@ const Navigation = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Throttle scroll events for better performance
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    return () => window.removeEventListener('scroll', throttledScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
     }
   };
 
@@ -47,14 +63,15 @@ const Navigation = () => {
       <div className="flex flex-col space-y-6">
         {/* Navigation dots */}
         <div className="flex flex-col space-y-4">
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="group relative flex items-center"
+              className="group relative flex items-center transition-all duration-300 hover:scale-110"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`nav-dot ${activeSection === item.id ? 'active' : ''}`} />
-              <span className="absolute left-6 px-3 py-1 bg-card text-card-foreground text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              <div className={`nav-dot transition-all duration-300 ${activeSection === item.id ? 'active scale-125' : 'hover:scale-110'}`} />
+              <span className="absolute left-6 px-3 py-1 bg-card/90 backdrop-blur-sm text-card-foreground text-sm rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-border/50 transform translate-x-2 group-hover:translate-x-0">
                 {item.label}
               </span>
             </button>
@@ -63,18 +80,22 @@ const Navigation = () => {
 
         {/* Social links */}
         <div className="flex flex-col space-y-4 pt-8 border-t border-border">
-          {socialLinks.map((link) => (
+          {socialLinks.map((link, index) => (
             <a
               key={link.label}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative"
+              className="group relative transition-all duration-300 hover:scale-110"
+              style={{ animationDelay: `${(index + navItems.length) * 0.1}s` }}
             >
-              <link.icon className="w-5 h-5 text-foreground-muted hover:text-primary transition-colors" />
-              <span className="absolute left-8 px-3 py-1 bg-card text-card-foreground text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              <link.icon className="w-5 h-5 text-foreground-muted hover:text-primary transition-all duration-300 hover:scale-110" />
+              <span className="absolute left-8 px-3 py-1 bg-card/90 backdrop-blur-sm text-card-foreground text-sm rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-border/50 transform translate-x-2 group-hover:translate-x-0">
                 {link.label}
               </span>
+              {link.label !== 'Email' && (
+                <ExternalLink className="w-3 h-3 absolute -top-1 -right-1 text-foreground-muted opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              )}
             </a>
           ))}
         </div>

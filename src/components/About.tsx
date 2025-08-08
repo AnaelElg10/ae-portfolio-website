@@ -2,9 +2,9 @@ import { Badge } from '@/components/ui/badge';
 
 const About = () => {
   const skills = [
-    'JavaScript', 'TypeScript', 'React', 'Next.js', 'Vue.js', 
-    'Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'AWS',
-    'Docker', 'GraphQL', 'Tailwind CSS', 'Git', 'Figma'
+    'Python', 'TypeScript', 'React', 'Next.js', 'Angular', 
+    'AWS', 'Docker', 'Kubernetes', 'Node.js', 'PostgreSQL',
+    'PyTorch', 'TensorFlow', 'GitLab CI/CD', 'IoT Core', 'DynamoDB'
   ];
 
   return (
@@ -16,43 +16,36 @@ const About = () => {
             <div className="space-y-4">
               <h2 className="text-primary font-mono text-lg">01. About Me</h2>
               <h3 className="text-4xl lg:text-5xl font-bold text-foreground">
-                Building the future, one line at a time.
+                Where Innovation Meets 
+                <span className="text-primary"> Limitless Ambition</span>
               </h3>
             </div>
 
             <div className="space-y-6 text-foreground-muted text-lg leading-relaxed">
-              <p>
-                Hello! I'm Aref, a passionate software engineer with a love for creating 
-                digital experiences that make a difference. My journey in tech started back 
-                in 2018 when I built my first website – turns out building things for the 
-                web is incredibly rewarding!
+              <p className="text-xl text-foreground leading-relaxed">
+                <strong className="text-primary">I'm driven by an unstoppable passion to innovate across the engineering spectrum.</strong> I don't just solve problems; I reimagine what's possible.
               </p>
 
               <p>
-                Fast-forward to today, and I've had the privilege of working at a variety of 
-                companies, from{' '}
-                <span className="text-primary hover:underline cursor-pointer">
-                  innovative startups
+                As a Computer Science Engineer from{' '}
+                <span className="text-primary font-semibold">University of Caen Normandy</span>, 
+                I specialize in{' '}
+                <span className="text-primary">cloud architecture, AI/ML innovation, and full-stack development</span>. 
+                With experience in{' '}
+                <span className="text-foreground font-semibold hover:text-primary transition-colors cursor-pointer">
+                  different  industries
                 </span>{' '}
-                to{' '}
-                <span className="text-primary hover:underline cursor-pointer">
-                  established enterprises
-                </span>. 
-                My main focus these days is building accessible, performant products and 
-                leading engineering initiatives that drive real business impact.
+                I build scalable solutions that drive measurable impact.
               </p>
 
               <p>
-                I also recently launched a{' '}
-                <span className="text-primary hover:underline cursor-pointer">
-                  comprehensive course
-                </span>{' '}
-                covering modern full-stack development, helping developers level up their 
-                skills with practical, real-world projects.
+                <span className="text-foreground font-semibold">Fluent in five languages</span> and 
+                ready for global challenges, I engineer solutions that{' '}
+                <span className="text-primary font-semibold">redefine possibilities</span>.
               </p>
 
-              <p>
-                Here are a few technologies I've been working with recently:
+              <p className="text-foreground">
+                Technologies I'm mastering:
               </p>
             </div>
 
@@ -74,64 +67,56 @@ const About = () => {
           {/* Right side - Stats and highlights */}
           <div className="space-y-8 fade-in-right">
             <div className="glass rounded-2xl p-8 space-y-8">
-              <h4 className="text-2xl font-bold text-foreground mb-6">Quick Stats</h4>
+              <h4 className="text-2xl font-bold text-foreground mb-6">Impact by Numbers</h4>
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-bold gradient-text">5+</div>
-                  <div className="text-foreground-muted text-sm">Years Experience</div>
+                  <div className="text-3xl font-bold gradient-text">5</div>
+                  <div className="text-foreground-muted text-sm">Languages Fluent</div>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="text-3xl font-bold gradient-text">65%</div>
+                  <div className="text-foreground-muted text-sm">Efficiency Gained</div>
                 </div>
                 
                 <div className="text-center space-y-2">
                   <div className="text-3xl font-bold gradient-text">50+</div>
-                  <div className="text-foreground-muted text-sm">Projects Completed</div>
+                  <div className="text-foreground-muted text-sm">IoT Devices Managed</div>
                 </div>
                 
                 <div className="text-center space-y-2">
-                  <div className="text-3xl font-bold gradient-text">15+</div>
-                  <div className="text-foreground-muted text-sm">Technologies</div>
+                  <div className="text-3xl font-bold gradient-text">100%</div>
+                  <div className="text-foreground-muted text-sm">IaC Coverage</div>
                 </div>
-                
-                <div className="text-center space-y-2">
-                  <div className="text-3xl font-bold gradient-text">3</div>
-                  <div className="text-foreground-muted text-sm">Companies</div>
+              </div>
+              
+              <div className="pt-4 border-t border-primary/20">
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-primary font-semibold">Open to Global Opportunities</span>
                 </div>
               </div>
             </div>
 
-            {/* Values */}
+            {/* Core Strengths */}
             <div className="space-y-6">
-              <h4 className="text-xl font-bold text-foreground">What drives me</h4>
+              <h4 className="text-xl font-bold text-foreground">What Sets Me Apart</h4>
               
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0" />
-                  <div>
-                    <h5 className="font-semibold text-foreground mb-1">Clean Code</h5>
-                    <p className="text-foreground-muted text-sm">
-                      Writing maintainable, scalable code that stands the test of time.
-                    </p>
-                  </div>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <span className="text-foreground-muted">Full-stack mastery from DevOps to AI/ML</span>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0" />
-                  <div>
-                    <h5 className="font-semibold text-foreground mb-1">User-Centric Design</h5>
-                    <p className="text-foreground-muted text-sm">
-                      Building experiences that users love and accessibility for all.
-                    </p>
-                  </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <span className="text-foreground-muted">Real-world impact at global companies</span>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="w-2 h-2 bg-primary-glow rounded-full mt-3 flex-shrink-0" />
-                  <div>
-                    <h5 className="font-semibold text-foreground mb-1">Continuous Learning</h5>
-                    <p className="text-foreground-muted text-sm">
-                      Staying up-to-date with the latest technologies and best practices.
-                    </p>
-                  </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <span className="text-foreground-muted">Five-language fluency for global collaboration</span>
                 </div>
               </div>
             </div>
