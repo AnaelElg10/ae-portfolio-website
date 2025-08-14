@@ -12,7 +12,7 @@ const Projects = () => {
       technologies: ['Typescript', 'React', 'Docker', 'NestJS', 'PostgreSQL', 'Docker', 'AWS'],
       github: 'https://github.com/AnaelElg10/bug-hawk',
       featured: true,
-      image: '/src/img/bughawk.png',
+      image: '/images/bughawk.png',
     },
     {
       title: 'EcoVision AI',
@@ -21,7 +21,7 @@ const Projects = () => {
       technologies: ['Python', 'TensorFlow & Pytorch', 'FastAPI', 'Hugging Face Transformers', 'Docker', 'Apache Spark', 'AWS', 'MLOps & Infrastructure'],
       github: 'https://github.com/AnaelElg10/Intelligent-Environmental-Monitoring-And-Prediction-System',
       featured: true,
-      image: '/src/img/EcoAI.png'
+      image: '/images/EcoAI.png'
     },
     {
       title: 'Global SmartCity Data Platform',
@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: ['Apache Kafka & Spark', 'AWS', 'PostgreSQL', 'Scikit-learn & XGBoost', 'Kubernetes'],
       github: 'https://github.com/AnaelElg10/Global-SmartCity-Data-Platform',
       featured: true,
-      image: '/src/img/GlobalSmartCity.png'
+      image: '/images/GlobalSmartCity.png'
     },
     {
       title: 'Blockchain and Smart Contracts : IdentiFi',
@@ -39,7 +39,7 @@ const Projects = () => {
       github: 'https://github.com/AnaelElg10/Blockchain-SmartContracts',
       live: 'https://identifi-with-blockchain.vercel.app/',
       featured: false,
-      image: '/src/img/IdentiFi.png'
+      image: '/images/IdentiFi.png'
     },
     {
       title: 'Interactive Data Visualization',
@@ -47,7 +47,7 @@ const Projects = () => {
       technologies: ['D3.js', 'CSS', 'Node.js', 'GraphQL', 'MongoDB', 'Docker'],
       github: 'https://github.com/AnaelElg10/Interactive-Data-Visualization',
       featured: false,
-      image: '/src/img/interactive-data.png'
+      image: '/images/interactive-data.png'
     },
     {
       title: 'DDoS Attack Simulation Tool',
@@ -55,7 +55,7 @@ const Projects = () => {
       technologies: ['Docker', 'Docker Compose', 'Bash Scripts', 'Apache HTTP Server', 'Nginx Server', 'Custom attacker scripts (using tools like hping3 and slowloris)'],
       github: 'https://github.com/AnaelElg10/AttackDDoS',
       featured: false,
-      image: '/src/img/ddos_attack_simulation_dashboard.png'
+      image: '/images/ddos_attack_simulation_dashboard.png'
     }
   ];
 

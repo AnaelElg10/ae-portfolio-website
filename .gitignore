@@ -73,3 +73,5 @@ pnpm-lock.yaml*
 
 # Project images
 src/img/
+
+.gitignore
